@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+* {
+  font-family: 'Source Sans Pro', serif;
+}
+
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li,
+a {
+  text-decoration: none;
+  font-weight: 1200px;
+  font-size: 16px;
+  list-style: none;
+}
+
+.ul_competetions li {
+  list-style: square;
+}
+/*# sourceMappingURL=style.css.map */
