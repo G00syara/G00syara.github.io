@@ -8,25 +8,110 @@
     font-family: 'Source Sans Pro', serif;
   }
   
-::after,
-::before {
-  box-sizing: border-box;
-}
-
+  ::after,
+  ::before {
+    box-sizing: border-box;
+  }
+  
+  a {
+    &:link,
+    &:visited {
+      color: black;
+    }
+  }
 li,
 a {
   text-decoration: none;
-  font-weight: 1200px;
-  font-size: 16px;
-  list-style: none;
+  border: 1px solid  black;
 }
 
-.ul_competetions{
-    li
-    {
-        list-style: square;
+header{
+    display: flex;
+    justify-content: space-between;
+      .user_pages{
+        margin: 0 0 0 0;
+        font-size: 18px;
+        align-items: center;
+      }
+      .header_navigate {
+        display: flex;
+        li{
+          display: inline-block; /* Отображать как строчный элемент */
+          margin: 0 0 0 15px;
+          justify-content:center!important;
+            .bx{
+              display: block;
+              text-align: center;
+            }
+            p{
+              margin: 0%;
+            }
+      }
     }
-}   
+}
+nav{
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+    .resume_map_timer{
+        .nav_navigate_left{
+          padding: 0%;
+          li{
+            width: auto;
+            margin: 0 10px 0 0;
+            display: inline-block; /* Отображать как строчный элемент */
+          }
+        }
+    }
+    .notes_friends_photos_settings{
+       .nav_navigate_right{
+          padding: 0%;
+          li{
+            width: auto;
+            margin: 0 10px 0 0;
+            display: inline-block; /* Отображать как строчный элемент */
+          }
+        }
+    }
+}
+
+
+.container{
+  display: flex;
+  justify-content: safe center;;
+  margin: 0 0 0 15px;
+  .main_text{
+    padding: 0 0 0 15px;
+    border: 1px solid black;
+    .text_first{
+      .ul_competetions{
+        li
+        {
+            list-style: square;
+        }
+      }
+    }
+  }
+  .contact{
+    border: 1px solid black;
+    margin: 15px;
+    .profile_image{
+      margin: 20px 50px 0 50px;
+      .my_image{
+        border-radius: 75%;
+      }
+    }
+    h2{
+      margin-bottom: 0%;
+    }
+    .bx{
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+ 
 
 
 @media (max-width: 600px){

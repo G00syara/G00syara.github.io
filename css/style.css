@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 * {
@@ -10,15 +11,127 @@
           box-sizing: border-box;
 }
 
+a:link, a:visited {
+  color: black;
+}
+
 li,
 a {
   text-decoration: none;
-  font-weight: 1200px;
-  font-size: 16px;
-  list-style: none;
+  border: 1px solid  black;
 }
 
-.ul_competetions li {
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .user_pages {
+  margin: 0 0 0 0;
+  font-size: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header_navigate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header_navigate li {
+  display: inline-block;
+  /* Отображать как строчный элемент */
+  margin: 0 0 0 15px;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+header .header_navigate li .bx {
+  display: block;
+  text-align: center;
+}
+
+header .header_navigate li p {
+  margin: 0%;
+}
+
+nav {
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .resume_map_timer .nav_navigate_left {
+  padding: 0%;
+}
+
+nav .resume_map_timer .nav_navigate_left li {
+  width: auto;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  /* Отображать как строчный элемент */
+}
+
+nav .notes_friends_photos_settings .nav_navigate_right {
+  padding: 0%;
+}
+
+nav .notes_friends_photos_settings .nav_navigate_right li {
+  width: auto;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  /* Отображать как строчный элемент */
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: safe center;
+      -ms-flex-pack: safe center;
+          justify-content: safe center;
+  margin: 0 0 0 15px;
+}
+
+.container .main_text {
+  padding: 0 0 0 15px;
+  border: 1px solid black;
+}
+
+.container .main_text .text_first .ul_competetions li {
   list-style: square;
+}
+
+.container .contact {
+  border: 1px solid black;
+  margin: 15px;
+}
+
+.container .contact .profile_image {
+  margin: 20px 50px 0 50px;
+}
+
+.container .contact .profile_image .my_image {
+  border-radius: 75%;
+}
+
+.container .contact h2 {
+  margin-bottom: 0%;
+}
+
+.container .contact .bx {
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */
