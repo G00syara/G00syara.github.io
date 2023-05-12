@@ -13,6 +13,7 @@
 
 body {
   background: #F5F5F5;
+  margin: 0%;
 }
 
 a:link, a:visited {
@@ -45,6 +46,7 @@ header {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   background: #FFFFFF;
+  padding-left: 37px;
 }
 
 header .user_pages {
@@ -184,5 +186,25 @@ header .header_navigate li p {
 .container .contact .bx {
   font-size: 25px;
   margin-bottom: 15px;
+}
+
+.container_map {
+  /* Далее стили окна с картой*/
+  margin: 32px 32px;
+  padding: 19px 32px 32px 32px;
+  background: #FFFFFF;
+}
+
+.container_map p {
+  font-size: 18px;
+  margin: 0%;
+  padding: 18px 0 19px 0;
+}
+
+.container_map .map {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  width: auto;
+  height: 531px;
 }
 /*# sourceMappingURL=style.css.map */
