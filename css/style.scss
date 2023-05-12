@@ -12,7 +12,9 @@
   ::before {
     box-sizing: border-box;
   }
-  
+  body {
+    background: #F5F5F5;
+  }
   a {
     &:link,
     &:visited {
@@ -22,12 +24,18 @@
 li,
 a {
   text-decoration: none;
-  border: 1px solid  black;
 }
-
+nav{
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+}
 header{
     display: flex;
     justify-content: space-between;
+    height: 64px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
       .user_pages{
         margin: 0 0 0 0;
         font-size: 18px;
@@ -35,9 +43,10 @@ header{
       }
       .header_navigate {
         display: flex;
+        margin: 0,10px,0,0;
         li{
           display: inline-block; /* Отображать как строчный элемент */
-          margin: 0 0 0 15px;
+          margin: 0 15px 0 15px;
           justify-content:center!important;
             .bx{
               display: block;
@@ -49,14 +58,31 @@ header{
       }
     }
 }
-nav{
-  margin-left: 15px;
-  display: flex;
-  justify-content: space-between;
+  .nav_second_header{
+    margin-left: 0px;
+    padding: 0px 32px;
+    display: flex;
+    height: 40px;
+    font-size: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #FAFAFA;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     .resume_map_timer{
         .nav_navigate_left{
+          align-items: center;
           padding: 0%;
+          margin: 0%;
+          .link_resume{
+            padding-left: 10px;
+            padding: 10px 10px 10px 10px;
+          }
+          .link_map, .link_timer{
+            padding: 10px 10px 10px 10px;
+          }
           li{
+            
             width: auto;
             margin: 0 10px 0 0;
             display: inline-block; /* Отображать как строчный элемент */
@@ -65,24 +91,28 @@ nav{
     }
     .notes_friends_photos_settings{
        .nav_navigate_right{
-          padding: 0%;
+        align-items: center;
+        padding: 0%;
+        margin: 0%;
           li{
+            padding: 10px 0px 10px 20px;
             width: auto;
             margin: 0 10px 0 0;
             display: inline-block; /* Отображать как строчный элемент */
           }
         }
     }
-}
+  }
 
 
 .container{
   display: flex;
   justify-content: safe center;;
-  margin: 0 0 0 15px;
+  margin: 32px 32px;
   .main_text{
     padding: 0 0 0 15px;
     border: 1px solid black;
+    background: #FFFFFF;
     .text_first{
       .ul_competetions{
         li
@@ -93,6 +123,7 @@ nav{
     }
   }
   .contact{
+    background: #FFFFFF;
     border: 1px solid black;
     margin: 15px;
     .profile_image{

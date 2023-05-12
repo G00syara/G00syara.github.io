@@ -11,6 +11,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background: #F5F5F5;
+}
+
 a:link, a:visited {
   color: black;
 }
@@ -18,7 +22,16 @@ a:link, a:visited {
 li,
 a {
   text-decoration: none;
-  border: 1px solid  black;
+}
+
+nav {
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header {
@@ -28,6 +41,10 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 64px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
 }
 
 header .user_pages {
@@ -42,12 +59,13 @@ header .header_navigate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0,10px,0,0;
 }
 
 header .header_navigate li {
   display: inline-block;
   /* Отображать как строчный элемент */
-  margin: 0 0 0 15px;
+  margin: 0 15px 0 15px;
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
@@ -62,32 +80,63 @@ header .header_navigate li p {
   margin: 0%;
 }
 
-nav {
-  margin-left: 15px;
+.nav_second_header {
+  margin-left: 0px;
+  padding: 0px 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 40px;
+  font-size: 16px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #FAFAFA;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-nav .resume_map_timer .nav_navigate_left {
+.nav_second_header .resume_map_timer .nav_navigate_left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0%;
+  margin: 0%;
 }
 
-nav .resume_map_timer .nav_navigate_left li {
+.nav_second_header .resume_map_timer .nav_navigate_left .link_resume {
+  padding-left: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav_second_header .resume_map_timer .nav_navigate_left .link_map, .nav_second_header .resume_map_timer .nav_navigate_left .link_timer {
+  padding: 10px 10px 10px 10px;
+}
+
+.nav_second_header .resume_map_timer .nav_navigate_left li {
   width: auto;
   margin: 0 10px 0 0;
   display: inline-block;
   /* Отображать как строчный элемент */
 }
 
-nav .notes_friends_photos_settings .nav_navigate_right {
+.nav_second_header .notes_friends_photos_settings .nav_navigate_right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0%;
+  margin: 0%;
 }
 
-nav .notes_friends_photos_settings .nav_navigate_right li {
+.nav_second_header .notes_friends_photos_settings .nav_navigate_right li {
+  padding: 10px 0px 10px 20px;
   width: auto;
   margin: 0 10px 0 0;
   display: inline-block;
@@ -101,12 +150,13 @@ nav .notes_friends_photos_settings .nav_navigate_right li {
   -webkit-box-pack: safe center;
       -ms-flex-pack: safe center;
           justify-content: safe center;
-  margin: 0 0 0 15px;
+  margin: 32px 32px;
 }
 
 .container .main_text {
   padding: 0 0 0 15px;
   border: 1px solid black;
+  background: #FFFFFF;
 }
 
 .container .main_text .text_first .ul_competetions li {
@@ -114,6 +164,7 @@ nav .notes_friends_photos_settings .nav_navigate_right li {
 }
 
 .container .contact {
+  background: #FFFFFF;
   border: 1px solid black;
   margin: 15px;
 }
