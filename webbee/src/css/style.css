@@ -265,7 +265,6 @@ header .header_navigate li p {
   }
   .nav_second_header {
     margin-left: 0px;
-    padding: 0px 32px;
     display: inline;
     height: auto;
     font-size: 16px;
@@ -296,7 +295,7 @@ header .header_navigate li p {
     -webkit-box-pack: center safe;
         -ms-flex-pack: center safe;
             justify-content: center safe;
-    margin: 32px;
+    margin: 0px 32px 32px 32px;
   }
   .container .profile_image {
     text-align: center;
