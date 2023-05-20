@@ -39,6 +39,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -117,19 +120,26 @@ header .header_navigate li p {
   padding: 10px 10px 10px 10px;
 }
 
+.nav_second_header .resume_map_timer .nav_navigate_left .link_resume:hover {
+  background-color: #FAFAFA;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15% 15% 0% 0%;
+}
+
 .nav_second_header .resume_map_timer .nav_navigate_left .link_map, .nav_second_header .resume_map_timer .nav_navigate_left .link_timer {
   padding: 10px 10px 10px 10px;
 }
 
-.nav_second_header .resume_map_timer .nav_navigate_left li {
-  width: auto;
-  margin: 0 10px 0 0;
-  display: inline-block;
-  /* Отображать как строчный элемент */
+.nav_second_header .resume_map_timer .nav_navigate_left .link_map:hover, .nav_second_header .resume_map_timer .nav_navigate_left .link_timer:hover {
+  background-color: #FAFAFA;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15% 15% 0% 0%;
 }
 
-.nav_second_header .resume_map_timer .nav_navigate_left :hover {
-  background-color: #fafafa;
+.nav_second_header .resume_map_timer .nav_navigate_left li {
+  width: auto;
+  display: inline-block;
+  /* Отображать как строчный элемент */
 }
 
 .nav_second_header .notes_friends_photos_settings .nav_navigate_right {
@@ -227,5 +237,69 @@ header .header_navigate li p {
   border-radius: 1px;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 750px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    padding-left: 37px;
+    padding-top: 10px;
+  }
+  header .user_pages {
+    display: inline;
+  }
+  header .header_navigate {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0%;
+  }
+  .nav_second_header {
+    margin-left: 0px;
+    padding: 0px 32px;
+    display: inline;
+    height: auto;
+    font-size: 16px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #FAFAFA;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: row;
+        flex-wrap: row;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center safe;
+        -ms-flex-pack: center safe;
+            justify-content: center safe;
+    margin: 32px;
+  }
+  .container .profile_image {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
