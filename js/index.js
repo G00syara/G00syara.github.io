@@ -2,6 +2,7 @@ const hashPageTittle = "JS SPA HASh-Rou";
 
 const hashRouters= {
     '/': '/views/main.html',
+    main: '/views/main.html',
     map: '/views/map.html',
     timer: '/views/timer.html',
 };
