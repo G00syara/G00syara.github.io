@@ -1,8 +1,8 @@
 import React from "react";
-import MainText from "./MainText"
-import Contact from "./Contact"
+import MainText from "../MainText"
+import Contact from "../Contact"
 
-class Body extends React.Component {
+class Main extends React.Component {
     render(){
         return(
         <div class = "container">
@@ -12,4 +12,4 @@ class Body extends React.Component {
         )
     }
 }
-export default Body
+export default Main

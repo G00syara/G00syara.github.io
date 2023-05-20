@@ -1,15 +1,16 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 class Header extends React.Component {
     render(){
         return (
         <header>       
         <nav class = "user_pages">
-          <a href = "/index.html" class = "link_user_pages"> 
+          <Link to = "/" class = "link_user_pages"> 
             <i class='bx bx-left-arrow-circle'></i>
             <b>User Pages</b>
             " - Profile  
-        </a>
+        </Link>
       </nav>
         <nav class = "statistics_invoices_shedule">
           <ul class = "header_navigate">

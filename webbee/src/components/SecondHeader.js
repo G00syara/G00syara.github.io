@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 class SecondHeader extends React.Component {
     render(){
@@ -7,22 +8,22 @@ class SecondHeader extends React.Component {
           <div class = "resume_map_timer">
             <ul class = "nav_navigate_left">
               <li>
-                <a href = "/index.html" class = "link_resume">
+                <Link to = "/" class = "link_resume">
                   <i class='bx bx-menu' ></i>
                   Resume
-                </a> 
+                </Link> 
               </li>
               <li>
-                <a href = "/map.html" class = "link_map">
+                <Link to = "/map" class = "link_map">
                   <i class='bx bx-map-alt'></i>
                   Map
-                </a> 
+                </Link> 
               </li>
               <li>
-                <a href = "/timer.html" class = "link_timer">
+                <Link to  = "/timer" class = "link_timer">
                   <i class='bx bx-time'></i>
                   Timer
-                </a> 
+                </Link> 
               </li>
             </ul>
           </div>

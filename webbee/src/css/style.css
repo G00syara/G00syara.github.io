@@ -43,8 +43,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 64px;
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   background: #FFFFFF;
   padding-left: 37px;
 }
@@ -106,6 +104,7 @@ header .header_navigate li p {
 }
 
 .nav_second_header .resume_map_timer .nav_navigate_left {
+  display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -127,6 +126,10 @@ header .header_navigate li p {
   margin: 0 10px 0 0;
   display: inline-block;
   /* Отображать как строчный элемент */
+}
+
+.nav_second_header .resume_map_timer .nav_navigate_left :hover {
+  background-color: #fafafa;
 }
 
 .nav_second_header .notes_friends_photos_settings .nav_navigate_right {
@@ -214,5 +217,15 @@ header .header_navigate li p {
   font-size: 1rem;
   width: auto;
   height: 531px;
+  background: #FFFFFF url(https://media0.giphy.com/media/hWZBZjMMuMl7sWe0x8/giphy.gif?cid=ecf05e47rr0bezjzv6q7lrn5d7b8gcki56trpogp8y3u3fzt&ep=v1_gifs_search&rid=giphy.gif&ct=g) center no-repeat;
+}
+
+.timer {
+  background: white;
+  padding: 24px;
+  margin: 16px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 /*# sourceMappingURL=style.css.map */
