@@ -1,23 +1,55 @@
+import React, {useEffect, useState} from 'react'
 
+const Timer = () => {
+  let [seconds, setSeconds] = useState(0)
+  let [minutes, setMinutes] = useState(0)
+  let [hours, setHours] = useState(0)
 
-function add() {
-    let time = sessionStorage.getItem('timer')
-    time ++
-    if(document.getElementById('time')){
-        let hours = ~~(time / 3600)
-        let minutes = ~~(time / 60) % 60
-        let seconds = time % 60
-        document.getElementById('time').textContent = (hours > 9 ? hours : "0" + hours) 
-                                        + ":" + (minutes > 9 ? minutes : "0" + minutes)
-                                        + ":" + (seconds > 9 ? seconds : "0" + seconds)
-    }
-    sessionStorage.setItem('timer', time)
-    timer()
+  let timer
+
+  useEffect(() => {
+    timer = setInterval(() => {
+      setSeconds(Number(seconds) + 1)
+      setMinutes(Number(minutes))
+      setHours(Number(hours))
+
+      if (seconds >= 59) {
+        setMinutes(Number(minutes) + 1)
+        setSeconds(0)
+      }
+      if (minutes >= 60) {
+        setHours(hours + 1)
+        setMinutes(0)
+        setSeconds(0)
+      }
+      sessionStorage.setItem('seconds', seconds)
+      sessionStorage.setItem('minutes', minutes)
+      sessionStorage.setItem('hours', hours)
+    }, 1000)
+
+    return () => clearInterval(timer)
+  })
+  useEffect(() => {
+    seconds = sessionStorage.getItem('seconds')
+    minutes = sessionStorage.getItem('minutes')
+
+    hours = sessionStorage.getItem('hours')
+
+    seconds = Number(seconds) + 1
+    minutes = Number(minutes)
+    hours = Number(hours)
+  }, [])
+
+  console.log(hours, minutes, seconds)
+
+  return (
+    <div id='time'>
+      <time>
+        {hours < 10 ? '0' + hours : hours}:
+        {minutes < 10 ? '0' + minutes : minutes}:
+        {seconds < 10 ? '0' + seconds : seconds}
+      </time>
+    </div>
+  )
 }
-
-function timer() {
-    if(!(sessionStorage.getItem('timer'))) sessionStorage.setItem('timer', 0)
-    setTimeout(add, 1000)
-}
-
-timer()
+export default Timer
