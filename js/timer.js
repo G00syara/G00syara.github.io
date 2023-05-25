@@ -1,39 +1,20 @@
-const accurateTimer = (fn, time) => {
-  let nextAt, timeout
-  nextAt = new Date().getTime() + time
-
-  const wrapper = () => {
-    nextAt += time
-
-    timeout = setTimeout(wrapper, nextAt - new Date().getTime())
-    fn()
+function Timer(callback, timeInterval) {
+  this.timeInterval = timeInterval
+  this.start = () => {
+    this.expected = Date.now() + this.timeInterval
+    this.timeout = setTimeout(this.round, this.timeInterval)
   }
-
-  const cancel = () => clearTimeout(timeout)
-
-  timeout = setTimeout(wrapper, nextAt - new Date().getTime())
-
-  return {cancel}
-}
-let timer2 = accurateTimer(() => add, 1000)
-
-const startTimer = () => {
-  if (on) return
-  timer2 = accurateTimer(() => {
-    elapsedSeconds++
-    on = true
-    let minutes = Math.floor(elapsedSeconds / 60),
-      seconds = elapsedSeconds % 60
-    seconds = seconds > 9 ? seconds : `0${seconds}`
-    document.getElementById('timer').innerHTML = `${minutes}:${seconds}`
-    console.log(`${elapsedSeconds} seconds have passed.`)
-  })
+  this.round = () => {
+    let drift = Date.now() - this.expected
+    callback()
+    this.expected += this.timeInterval
+    this.timeout = setTimeout(this.round, this.timeInterval - drift)
+  }
 }
 
 function add() {
   let time = sessionStorage.getItem('timer')
   time++
-
   if (document.getElementById('time')) {
     let hours = ~~(time / 3600)
     let minutes = ~~(time / 60) % 60
@@ -46,12 +27,12 @@ function add() {
       (seconds > 9 ? seconds : '0' + seconds)
   }
   sessionStorage.setItem('timer', time)
-  timer()
 }
 
 function timer() {
   if (!sessionStorage.getItem('timer')) sessionStorage.setItem('timer', 0)
-  setTimeout(add, 1000)
+  const myTimer = new Timer(() => add(), 1000)
+  myTimer.start()
 }
 
 timer()
