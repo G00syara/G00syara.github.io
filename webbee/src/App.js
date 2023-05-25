@@ -4,8 +4,8 @@ import SecondHeader from './components/SecondHeader'
 import Main from './components/views/Main'
 import Map from './components/views/Map'
 import Timer from './components/views/Timer'
-
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import TimerWrapper from './components/TimerWrapper'
 
 class App extends React.Component {
   render() {
@@ -15,6 +15,7 @@ class App extends React.Component {
           <BrowserRouter>
             <Header />
             <SecondHeader />
+            <TimerWrapper />
             <Routes>
               <Route path='/' index element={<Main />} />
               <Route path='/map' index element={<Map />} />

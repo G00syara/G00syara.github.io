@@ -8,10 +8,10 @@ class Contact extends React.Component {
         <div class='profile_image'>
           <img
             src={MyPhoto}
-            alt='Photo'
-            width='132'
-            height='132'
-            class='my_image'
+            alt="Photo"
+            width="132"
+            height="132"
+            class="my_image"
           />
         </div>
         <div class='image_links_name2'>
