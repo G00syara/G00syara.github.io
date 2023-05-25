@@ -6,6 +6,7 @@ import Map from './components/views/Map'
 import Timer from './components/views/Timer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import TimerWrapper from './components/TimerWrapper'
+// import { Context } from './components/Context'
 
 class App extends React.Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-
+// import {Context} from './Context'
 const Timer = () => {
   let [time, setTime] = useState(+sessionStorage.getItem('time') + 1)
 
@@ -16,7 +16,7 @@ const Timer = () => {
     )
   }, [time])
 
-  console.log(time)
+  // console.log(time)
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,5 +26,9 @@ const Timer = () => {
   })
 
   return cachedTime
+
+  // <Context.Provider value={{
+
+  // }}></Context.Provider>
 }
 export default Timer
