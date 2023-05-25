@@ -287,11 +287,6 @@ header .header_navigate li p {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   }
 }
-
-.time_hidden {
-  display: none;
-}
-
 @media (max-width: 600px) {
   .container {
     display: -webkit-box;
